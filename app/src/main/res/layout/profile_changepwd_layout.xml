@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/txtPwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="left"
+        android:padding="10dp"
+        android:text="@string/strChangePwd"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtPwd"
+        android:background="@color/profileBgClr"
+        android:hint="@string/strEmail"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColorHighlight="@color/hintClr" />
+
+    <EditText
+        android:id="@+id/edtPwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtEmail"
+        android:layout_marginTop="10dp"
+        android:background="@color/profileBgClr"
+        android:hint="@string/strNewPwd"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColorHighlight="@color/hintClr" />
+
+    <EditText
+        android:id="@+id/edtConfirmPwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtPwd"
+        android:layout_marginTop="10dp"
+        android:background="@color/profileBgClr"
+        android:hint="@string/strConfirmPwd"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColorHighlight="@color/hintClr" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtConfirmPwd"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:id="@+id/txtCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/strCancel"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/txtDone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_toRightOf="@+id/txtCancel"
+            android:layout_weight="1"
+            android:background="@color/primaryColor"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/strDone"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</RelativeLayout>

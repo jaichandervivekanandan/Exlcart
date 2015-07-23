@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Exlcart</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="splashTxt">Let\'s Shop</string>
+
+    <string name="back">BACK</string>
+    <string name="or">(or)</string>
+
+    <string name="hintUserId">Enter your User ID</string>
+    <string name="hintPassword">Enter your Password</string>
+    <string name="remindme">Remind Me</string>
+    <string name="forgotpwd">Forgot Password ?</string>
+    <string name="login">LOGIN</string>
+    <string name="dnthaveacc">Don\'t have an account? Sign up Now!</string>
+    <string name="signin">SIGNIN</string>
+    <string name="strTryAgain">TRY AGAIN</string>
+    <string name="strCancel">CANCEL</string>
+    <string name="strNetValidation">Please Check your internet Connection...</string>
+    <string name="strNotice">Notice</string>
+    <string name="strSuccess">Success</string>
+    <string name="strDone">Done</string>
+    <string name="strOk">OK</string>
+    <string name="strVaildEmail">Please Enter Valid Email</string>
+    <string name="strValidPassword">Please Enter Password</string>
+    <string name="strValidConfirmPassword">Please Enter Confirm Password</string>
+    <string name="strVaildUserID">Please Enter User ID</string>
+    <string name="strSignUp">SIGNUP</string>
+    <string name="strPhoneNumber">Phone Number</string>
+    <string name="strEmail">Email</string>
+    <string name="strName">Name</string>
+    <string name="strSignUpNow">SIGNUP NOW!</string>
+    <string name="strBasement">BASEMENT</string>
+    <string name="strMyOrders">My Orders</string>
+    <string name="strNotificationSettings">Notification Settings</string>
+    <string name="strAboutUs">About Us</string>
+    <string name="strContactus">Contact Us</string>
+    <string name="strShipmentInfo">SHIPMENT INFO</string>
+    <string name="strFirstName">First Name</string>
+    <string name="strLastName">Last Name</string>
+    <string name="strCompany">Company</string>
+    <string name="strStreetAddress">Street Address</string>
+    <string name="strCity">City</string>
+    <string name="strZipCode">Zip Code</string>
+    <string name="strState">State</string>
+    <string name="strChangePwd">CHANGE PASSWORD</string>
+    <string name="strNewPwd">New Password</string>
+    <string name="strConfirmPwd">Confirm Password</string>
+    <string name="strPwdConPwd">Password &amp; Confirm Password should be same</string>
+    <string name="strPincode">Pincode</string>
+    <string name="strCountry">Country</string>
+    <string name="strPwd">Password</string>
+    <string name="strFax">Fax</string>
+    <string name="strNewsLetter">NewsLetter</string>
+    <string name="strValidFirstName">Enter your First name..!</string>
+    <string name="strValidLastName">Enter your Last Name..!</string>
+</resources>

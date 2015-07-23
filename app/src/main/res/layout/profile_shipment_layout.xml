@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/txtShipment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="@string/strShipmentInfo"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edtFName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtShipment"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/profileBgClr"
+        android:ems="10"
+        android:hint="First Name"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColorHint="@color/edtHintClr" />
+
+    <EditText
+        android:id="@+id/edtLName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtShipment"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/edtFName"
+        android:background="@color/profileBgClr"
+        android:ems="10"
+        android:hint="@string/strLastName"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColorHint="@color/edtHintClr" />
+
+
+    <EditText
+        android:id="@+id/edtPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtFName"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/profileBgClr"
+        android:ems="10"
+        android:hint="@string/strPhoneNumber"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColorHint="@color/edtHintClr" />
+
+    <EditText
+        android:id="@+id/edtCompany"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtLName"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/edtPhoneNumber"
+        android:background="@color/profileBgClr"
+        android:ems="10"
+        android:hint="@string/strCompany"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColorHint="@color/edtHintClr" />
+
+
+    <EditText
+        android:id="@+id/edtStreetAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtPhoneNumber"
+        android:layout_marginTop="10dp"
+        android:background="@color/profileBgClr"
+        android:ems="10"
+        android:hint="@string/strStreetAddress"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColorHint="@color/edtHintClr" />
+
+    <EditText
+        android:id="@+id/edtCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtStreetAddress"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/profileBgClr"
+        android:ems="10"
+        android:hint="@string/strCity"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColorHint="@color/edtHintClr" />
+
+    <EditText
+        android:id="@+id/edtZipCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtStreetAddress"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/edtCity"
+        android:background="@color/profileBgClr"
+        android:ems="10"
+        android:hint="@string/strZipCode"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColorHint="@color/edtHintClr" />
+
+
+    <EditText
+        android:id="@+id/edtState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtCity"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/profileBgClr"
+        android:ems="10"
+        android:hint="@string/strState"
+        android:padding="10dp"
+        android:textColorHint="@color/edtHintClr" />
+
+    <Spinner
+        android:id="@+id/spnCountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtZipCode"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/edtState"
+        android:ems="10" />
+
+</RelativeLayout>
