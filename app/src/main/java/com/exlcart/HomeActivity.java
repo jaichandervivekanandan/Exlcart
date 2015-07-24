@@ -27,6 +27,7 @@ public class HomeActivity extends FragmentActivity implements  ViewPager.OnPageC
     TextView txtTitle;
     ViewPager viewPager;
     FrameLayout containerLayout;
+    /*at long last commented succefully .. hello sir !! ;-) */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
