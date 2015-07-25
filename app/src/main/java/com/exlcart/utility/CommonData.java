@@ -12,6 +12,7 @@ public class CommonData {
     public static int METHODPOST = Request.Method.POST;
 
     public static String STATUS_SUCCESS = "success";
+    public static String STATUS_SUCCESS_CODE="200";
 
 
     //Shared Pref KEY
