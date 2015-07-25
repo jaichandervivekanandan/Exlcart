@@ -61,7 +61,7 @@ public class HomeFragment extends Fragment implements APIResult {
         if (isSuccess) {
             try{
                 JSONObject object = new JSONObject(result);
-                if (object.getString("status").equals(CommonData.STATUS_SUCCESS)){
+                if (object.getString("status").equals(CommonData.STATUS_SUCCESS_CODE)){
                     JSONArray jsonArray = object.getJSONArray("categories");
                     int total_main_category = jsonArray.length();
 

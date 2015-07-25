@@ -157,7 +157,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
             if (isSuccess) {
                 try {
                     JSONObject jsonObject = new JSONObject(result);
-                    if (jsonObject.getInt("httpCode") == 200) {
+                    if (jsonObject.getString("httpCode").equals(CommonData.STATUS_SUCCESS_CODE)) {
                         changePwdDialog.dismiss();
                         Toast.makeText(getActivity(), "" + jsonObject.getString("message"), Toast.LENGTH_LONG).show();
                     } else {
