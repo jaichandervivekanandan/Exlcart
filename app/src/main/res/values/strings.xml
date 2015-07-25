@@ -54,4 +54,6 @@
     <string name="strNewsLetter">NewsLetter</string>
     <string name="strValidFirstName">Enter your First name..!</string>
     <string name="strValidLastName">Enter your Last Name..!</string>
+
+    <string name="maincategory">MAIN CATEGORY</string>
 </resources>

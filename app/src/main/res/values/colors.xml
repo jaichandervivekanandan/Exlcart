@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="primaryColor">#2ACDC9</color>
+    <color name="primaryColorDark">#00B8D4</color>
     <color name="viewColor">#515254</color>
     <color name="editTextColor">#EEEEEE</color>
     <color name="holderBg">#EEEEEE</color>

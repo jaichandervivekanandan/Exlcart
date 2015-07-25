@@ -4,15 +4,19 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
 import com.exlcart.R;
 import com.exlcart.adapter.MainCategoryAdapter;
+import com.exlcart.adapter.NavigationDrawerAdapter;
 import com.exlcart.interfaces.APIResult;
 import com.exlcart.service.APIService;
 import com.exlcart.utility.CommonData;
@@ -28,6 +32,7 @@ public class HomeFragment extends Fragment implements APIResult {
     RecyclerView recyclerView;
     RecyclerView.Adapter<MainCategoryAdapter.ViewHolder> adapter;
     RecyclerView.LayoutManager recyclerLayoutManager;
+    ListView drawerlist;
 
     @Nullable
     @Override
@@ -35,6 +40,7 @@ public class HomeFragment extends Fragment implements APIResult {
         View view = inflater.inflate(R.layout.home_fragment_layout, container, false);
 
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerMainCategory);
+        drawerlist=(ListView)view.findViewById(R.id.leftdrawerlayout_list);
         recyclerView.setHasFixedSize(true);
         // use a linear layout manager
         recyclerLayoutManager = new LinearLayoutManager(getActivity());
@@ -73,7 +79,9 @@ public class HomeFragment extends Fragment implements APIResult {
                         image[i] = "http://www.cwrodtool.com/customer/cwroto/images/camera-no-image.jpg";
                     }
                     MainCategoryAdapter adapter = new MainCategoryAdapter(getActivity(),categoryName,image);
+                    NavigationDrawerAdapter naviAdapter=new NavigationDrawerAdapter(getActivity(),categoryName);
                     recyclerView.setAdapter(adapter);
+                    drawerlist.setAdapter(naviAdapter);
                 }
             }catch (Exception ex){
                 Log.d("OBJECT",""+ex.getMessage());
