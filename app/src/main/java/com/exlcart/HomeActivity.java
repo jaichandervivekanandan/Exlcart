@@ -55,7 +55,7 @@ public class HomeActivity extends FragmentActivity implements  ViewPager.OnPageC
         listIcon.add(R.drawable.header_menu);
         listIcon.add(R.drawable.header_menu);
         listIcon.add(R.drawable.header_menu);
-       listIcon.add(R.drawable.header_menu);
+        listIcon.add(R.drawable.header_menu);
         listIcon.add(R.drawable.header_menu);
 
 
