@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="48dp"
+    android:layout_height="wrap_content"
+    android:minHeight="?attr/listPreferredItemHeightSmall"
     android:background="@drawable/navigation_drawer_selector">
 
     <TextView
         android:id="@+id/category_name"
         android:layout_width="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_toLeftOf="@id/icon"
-        android:layout_marginLeft="40dp"
-        android:minHeight="?android:attr/listPreferredItemHeightSmall"
-        android:textAppearance="?android:attr/textAppearanceListItemSmall"
+        android:text="raghu"
+        android:layout_marginLeft="10dp"
         android:textColor="@color/black"
-        android:gravity="center_vertical"
+        android:layout_centerInParent="true"
+        android:gravity="left"
         android:paddingRight="40dp"/>
 
     <ImageView
         android:id="@+id/icon"
-        android:layout_width="40dp"
+        android:layout_width="36dp"
         android:src="@drawable/drawer_arrow"
         android:layout_marginRight="10dp"
-        android:layout_height="40dp"
+        android:layout_height="36dp"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true" />
 

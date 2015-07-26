@@ -99,11 +99,7 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
                     HashMap<String, String> params = new HashMap<String, String>();
                     params.put("username", userID);
                     params.put("password", userPwd);
-                    //new APIService().requestingWebService(this, CommonData.METHODPOST, "login", this, params);
-                    /*temp for testing*/
-                    Intent intentLaunch = new Intent(SignInActivity.this,HomeActivity.class);
-                    startActivity(intentLaunch);
-                    finish();
+                    new APIService().requestingWebService(this, CommonData.METHODPOST, "login", this, params);
 
                 }
                 break;

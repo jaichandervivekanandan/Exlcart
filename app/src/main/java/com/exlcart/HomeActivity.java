@@ -18,11 +18,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.astuetz.PagerSlidingTabStrip;
 import com.exlcart.adapter.CustomPagerAdapter;
+import com.exlcart.adapter.NavigationDrawerAdapter;
 import com.exlcart.fragment.CartFragment;
 import com.exlcart.fragment.HomeFragment;
 import com.exlcart.fragment.ProfileFragment;
@@ -41,8 +43,11 @@ public class HomeActivity extends AppCompatActivity implements ViewPager.OnPageC
     DrawerLayout drawerLayout;
     FrameLayout containerLayout;
     Toolbar toolbar;
+    LinearLayout layout;
     ActionBarDrawerToggle DrawerButton;
-    ListView drawerlist;
+    public static ListView drawerlist;
+    public  static NavigationDrawerAdapter naviAdapter;
+    public String list[]={""};
     /*at long last commented succefully .. hello ragu !! ;-) */
 
     @Override
@@ -55,6 +60,9 @@ public class HomeActivity extends AppCompatActivity implements ViewPager.OnPageC
         drawerlist = (ListView) findViewById(R.id.leftdrawerlayout_list);
         setSupportActionBar(toolbar);
         toolbar.setTitle(getString(R.string.strBasement));
+        layout=(LinearLayout)findViewById(R.id.drawer);
+        naviAdapter=new NavigationDrawerAdapter(HomeActivity.this,list);
+        drawerlist.setAdapter(naviAdapter);
         LoadFragments();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
@@ -134,7 +142,7 @@ public class HomeActivity extends AppCompatActivity implements ViewPager.OnPageC
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
-        boolean drawerOpen = drawerLayout.isDrawerOpen(drawerlist);
+        boolean drawerOpen = drawerLayout.isDrawerOpen(layout);
         menu.findItem(R.id.action_settings).setVisible(!drawerOpen);
         return super.onPrepareOptionsMenu(menu);
     }

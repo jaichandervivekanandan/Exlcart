@@ -61,9 +61,8 @@ public class APIService {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.d("Raghu","Error from network");
                 mProgressdialog.dismiss();
-                String errorMessage = "Please Try Again, ";
+                String errorMessage = "Please Try Again ,";
                 if (error instanceof NetworkError) {
                 } else if (error instanceof ServerError) {
                     errorMessage += "Server Error ";
@@ -78,6 +77,7 @@ public class APIService {
                 } else if (error instanceof Exception) {
                     errorMessage += error.getMessage();
                 }
+                errorMessage+=error.getMessage();
                 mResult.getResult(true, errorMessage);
             }
         }) {
