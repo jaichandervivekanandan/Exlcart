@@ -13,11 +13,15 @@ import com.android.volley.Response;
 import com.android.volley.ServerError;
 import com.android.volley.TimeoutError;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.exlcart.AppController;
 import com.exlcart.R;
 import com.exlcart.interfaces.APIResult;
 import com.exlcart.utility.CommonData;
+import com.google.gson.JsonObject;
+
+import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -35,7 +39,7 @@ public class APIService {
 
     private Dialog mProgressdialog;
 
-    public void requestingWebService(Context context, int method, String url,APIResult result,HashMap<String,String> hashMap) {
+    public void requestingWebService(Context context, int method, String url, APIResult result, HashMap<String, String> hashMap) {
 
         this.mRequestingMethod = method;
         this.mContext = context;
@@ -52,13 +56,13 @@ public class APIService {
             @Override
             public void onResponse(String response) {
                 mProgressdialog.dismiss();
-                mResult.getResult(true,response.toString());
+                mResult.getResult(true, response);
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 mProgressdialog.dismiss();
-                String errorMessage = "Please Try Again, ";
+                String errorMessage = "Please Try Again ,";
                 if (error instanceof NetworkError) {
                 } else if (error instanceof ServerError) {
                     errorMessage += "Server Error ";
@@ -73,7 +77,8 @@ public class APIService {
                 } else if (error instanceof Exception) {
                     errorMessage += error.getMessage();
                 }
-                mResult.getResult(true,errorMessage);
+                errorMessage+=error.getMessage();
+                mResult.getResult(true, errorMessage);
             }
         }) {
             @Override

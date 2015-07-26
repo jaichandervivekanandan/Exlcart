@@ -172,7 +172,7 @@ public class SignUpActivity extends BaseActivity implements View.OnClickListener
             try{
                 JSONObject jsonObject = new JSONObject(result);
                 String status = jsonObject.getString("status");
-                if(status.equals(CommonData.STATUS_SUCCESS)){
+                if(status.equals(CommonData.STATUS_SUCCESS_CODE)){
                     CustomDailog(SignUpActivity.this,"SUCCESS",jsonObject.getString("message"),"OK");
                     closeChildActivity = true;
                 }else{

@@ -118,7 +118,7 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
         try {
             if (isSuccess) {
                 jsonObject = new JSONObject(result);
-                if(jsonObject.getString("status").equals(CommonData.STATUS_SUCCESS)){
+                if(jsonObject.getString("status").equals(CommonData.STATUS_SUCCESS_CODE)){
                     jsonObject = jsonObject.getJSONObject("customer");
                     SessionSave.saveSession(CommonData.KEY_USER_ID,jsonObject.getString("customer_id"),getApplicationContext());
                     SessionSave.saveSession(CommonData.KEY_EMAIL,jsonObject.getString("email"),getApplicationContext());
@@ -127,6 +127,7 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
                     SessionSave.saveSession(CommonData.KEY_TELEPHONE,jsonObject.getString("telephone"),getApplicationContext());
                     SessionSave.saveSession(CommonData.KEY_NEWSLETTER, jsonObject.getString("newsletter"), getApplicationContext());
                     SessionSave.saveSession(CommonData.KEY_FAX, jsonObject.getString("fax"), getApplicationContext());
+
 
 
                     CustomDailog(this, getString(R.string.strSuccess), "Successfully Logged In", getString(R.string.strDone));
